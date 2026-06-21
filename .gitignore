@@ -16,3 +16,4 @@ out/
 
 # generated visual QA previews
 evant-*-preview.png
+.vercel

@@ -4,6 +4,12 @@ A responsive, seeded-data project management workspace for planning a ranch-scal
 
 The first version includes 15 dashboard modules, interactive local calculators and checklists, mobile navigation, and source-aligned planning data. It is based on the project brief, detailed master prompt, and Word handoff included in this repository.
 
+## Public website
+
+[Visit the Evant Ranch Water Collection dashboard](https://evant-ranch-water.vercel.app)
+
+The production website is hosted on Vercel and connected to this GitHub repository. Approved changes merged into the production branch can be redeployed through the linked Vercel project.
+
 ## Local development
 
 ```bash
