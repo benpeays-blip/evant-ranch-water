@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# Next.js output
+.next/
+out/
+
+# local environment
+.env*
+!.env.example
+
+# operating system and logs
+.DS_Store
+*.log
+*.tsbuildinfo
+
+# generated visual QA previews
+evant-*-preview.png

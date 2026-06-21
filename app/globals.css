@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #17322d;
+  --pine: #173f37;
+  --pine-deep: #0f2f2a;
+  --river: #3f7f86;
+  --sky: #dcecf0;
+  --sand: #f4f0e7;
+  --clay: #b76c42;
+  --line: #dfe4dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f7f8f5;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 82% -20%, rgba(129, 183, 185, 0.16), transparent 31rem),
+    #f7f8f5;
+  font-family: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  color: white;
+  background: #3f7f86;
+}
+
+.serif {
+  font-family: Iowan Old Style, Baskerville, "Times New Roman", serif;
+}
+
+.paper-grid {
+  background-image:
+    linear-gradient(rgba(23, 63, 55, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 63, 55, 0.035) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgba(63, 127, 134, 0.35);
+  outline-offset: 2px;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.page-rise {
+  animation: rise 360ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
