@@ -1,0 +1,193 @@
+{
+  "project_name": "Grandparents Ranch Rainwater System",
+  "prepared_date": "2026-06-23",
+  "location_context": "Hamilton/Lampasas region, Central Texas",
+  "goal": "Collect rainwater from a 5000+ sq ft metal roof, store it in an above-ground tank, pump it back to the house, treat it for potable use, and tie it into the existing well system to reduce well use while keeping well backup.",
+  "management_strategy": "User wants to manage project and hire separate contractors by scope rather than turnkey rainwater company.",
+  "known_facts": {
+    "roof": {
+      "catchment_area_sq_ft_min": 5000,
+      "material": "metal",
+      "age_years": "5 or less",
+      "gutters": true,
+      "downspouts_count": 8,
+      "downspout_distribution": "all sides of house",
+      "current_downspout_discharge": "ground",
+      "gutter_size": "standard residential",
+      "gutter_screens": false,
+      "overflow_observed": false,
+      "tree_debris_context": "house is open with no trees within roughly 100 yards"
+    },
+    "house": {
+      "foundation": "slab",
+      "bathrooms": 5.5,
+      "showers_tubs": 5,
+      "toilets": "standard flush",
+      "large_tub_used": false,
+      "equipment_closet_location": "interior/central",
+      "attic_route_to_closet": false
+    },
+    "usage": {
+      "guest_pattern": "2-5 people often on weekends; about 15 guests twice a month",
+      "main_intent": "help preserve well; rainwater may not fully take over",
+      "scope": "house use only, no irrigation/livestock/garden"
+    },
+    "existing_well_system": {
+      "aquifer": "Trinity Aquifer",
+      "known_problem": "none; preservation/reduced use is goal",
+      "well_location": "about 50 yards west of house",
+      "pressure_tank_location": "by actual well in well house",
+      "existing_equipment": [
+        "pressure tank",
+        "sediment filter",
+        "softener",
+        "kitchen sink RO"
+      ],
+      "ro_scope": "kitchen sink only",
+      "pressure_setting_known": false,
+      "well_line_entry_known": false,
+      "well_line_size_material_known": false
+    },
+    "rain_tank_site": {
+      "direction_from_house": "north",
+      "distance_yards": 100,
+      "elevation_lower_ft": 10,
+      "route_grade": "steady downhill",
+      "space_for_large_tanks": true,
+      "drainage": "well-drained",
+      "visible_from_house": true,
+      "screening": "large oak nearby helps screen, not close enough to interfere",
+      "animals_equipment_access_possible": true,
+      "fencing_possible": true
+    },
+    "overflow": {
+      "pond_distance_yards": 50,
+      "pond_direction_from_tank": "west",
+      "grade_to_pond": "steady downhill",
+      "overflow_plan": "simple functional pipe/swale to pond"
+    },
+    "power": {
+      "grid_power_at_house": true,
+      "power_at_tank_site": false,
+      "electric_trenching": "straightforward",
+      "solar_primary_rejected": true,
+      "solar_future_backup_possible": true
+    }
+  },
+  "decisions": [
+    "Design for whole-house potable rainwater with well backup.",
+    "Manual source-selector valve box preferred over full automation.",
+    "Pump and pressure tank should be at/near rainwater tank.",
+    "Grid-powered pump is preferred; solar only future backup.",
+    "Exterior tie-in before well line enters house is likely best.",
+    "Compacted gravel/crushed rock tank pad preferred if tank manufacturer allows.",
+    "Above-ground metal tank preferred but open to alternatives.",
+    "Collect from all 8 downspouts if practical.",
+    "Overflow should route to pond if properly protected.",
+    "Hire separate contractors by scope, not turnkey."
+  ],
+  "recommended_components": {
+    "collection": [
+      "downspout screens",
+      "solid PVC collection manifold",
+      "cleanouts",
+      "central roof-washer/first-flush",
+      "4-inch solid PVC gravity line"
+    ],
+    "storage": [
+      "20k-30k above-ground metal potable tank",
+      "potable liner",
+      "screened vent",
+      "screened overflow",
+      "floating intake",
+      "bottom drain",
+      "level gauge",
+      "manway"
+    ],
+    "pump_pressure": [
+      "grid-powered booster pump",
+      "44-86 gallon diaphragm pressure tank",
+      "40/60 pressure switch",
+      "low-water cutoff",
+      "pressure gauge",
+      "check valve",
+      "hose bib/flush point",
+      "isolation valves"
+    ],
+    "return_line": [
+      "1.5-inch minimum potable pressure line",
+      "2-inch preferred",
+      "tracer wire/marking tape",
+      "isolation valves"
+    ],
+    "tie_in": [
+      "large valve box",
+      "full-port ball valve on rainwater line",
+      "full-port ball valve on well line",
+      "check/backflow protection on each source",
+      "common outlet to house",
+      "labels",
+      "unions",
+      "optional gauge/flush port"
+    ],
+    "treatment": [
+      "existing sediment filter",
+      "existing softener initially retained",
+      "whole-house carbon filter",
+      "final sediment polishing if needed",
+      "NSF/ANSI 55 Class A UV",
+      "sample taps",
+      "kitchen RO retained",
+      "optional pH/calcite neutralizer if testing shows need"
+    ]
+  },
+  "contractor_scopes": {
+    "excavation": [
+      "tank pad",
+      "trenching",
+      "overflow to pond",
+      "expose well line",
+      "backfill"
+    ],
+    "tank_supplier_installer": [
+      "quote/install 20k and 30k tank options",
+      "provide pad specs",
+      "install tank/liner/roof/fittings"
+    ],
+    "plumber": [
+      "pump plumbing",
+      "pressure line",
+      "source-selector valve box",
+      "well line tie-in",
+      "backflow/check valves",
+      "treatment plumbing"
+    ],
+    "electrician": [
+      "dedicated pump circuit",
+      "underground conduit",
+      "weatherproof disconnect",
+      "pump controls",
+      "future backup readiness"
+    ],
+    "water_treatment": [
+      "carbon",
+      "UV",
+      "sample taps",
+      "water testing",
+      "pH/mineral correction recommendation"
+    ]
+  },
+  "open_questions": [
+    "Exact well line entry point into house",
+    "Existing well line size and material",
+    "Current well pressure cut-in/cut-out",
+    "Whether softener has built-in bypass",
+    "Whether all downspouts can gravity-flow to one manifold",
+    "Best central first-flush location",
+    "Final tank size: 20k vs 30k gallons",
+    "Tank supplier pad requirements",
+    "Final pump size",
+    "Final UV size",
+    "Whether pH neutralization is needed after testing"
+  ]
+}

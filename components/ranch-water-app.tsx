@@ -6,10 +6,12 @@ import {
   Calculator,
   CheckSquare2,
   ChevronDown,
+  ClipboardList,
   ClipboardCheck,
   Database as TankIcon,
   Droplets,
   FileBox,
+  FileSpreadsheet,
   FileText,
   Gauge,
   LayoutDashboard,
@@ -19,6 +21,7 @@ import {
   ShieldAlert,
   Sparkles,
   SprayCan,
+  UserCheck,
   Wrench,
   X,
 } from "lucide-react";
@@ -27,6 +30,8 @@ import {
   Dashboard,
   DocumentLibrary,
   ExecutiveSummary,
+  BidSystem,
+  ContractorRecommendations,
   IntakeQuestions,
   MaintenancePlan,
   MasterTaskBoard,
@@ -35,6 +40,7 @@ import {
   RanchScalePlan,
   RegulatoryChecklist,
   RiskRegister,
+  SiteVisitPlanner,
   TankPlanning,
   TreatmentPlanning,
   WellInvestigation,
@@ -44,6 +50,7 @@ export type PageKey =
   | "dashboard"
   | "intake"
   | "tasks"
+  | "siteVisit"
   | "calculators"
   | "tanks"
   | "distribution"
@@ -51,6 +58,8 @@ export type PageKey =
   | "treatment"
   | "regulatory"
   | "bids"
+  | "recommendations"
+  | "bidSystem"
   | "documents"
   | "plan"
   | "risks"
@@ -63,7 +72,8 @@ const groups = [
     items: [
       { key: "dashboard", label: "Dashboard", icon: LayoutDashboard },
       { key: "intake", label: "Intake questions", icon: ClipboardCheck, count: 4 },
-      { key: "tasks", label: "Master task board", icon: CheckSquare2, count: 10 },
+      { key: "siteVisit", label: "Site visit planner", icon: ClipboardList, count: 4 },
+      { key: "tasks", label: "Master task board", icon: CheckSquare2, count: 12 },
     ],
   },
   {
@@ -81,14 +91,16 @@ const groups = [
     items: [
       { key: "regulatory", label: "Regulatory checklist", icon: ClipboardCheck },
       { key: "bids", label: "Contractor bid package", icon: FileText },
+      { key: "recommendations", label: "Contractor recommendations", icon: UserCheck },
+      { key: "bidSystem", label: "Bid comparison", icon: FileSpreadsheet },
       { key: "documents", label: "Document library", icon: FileBox },
     ],
   },
   {
     label: "Operations",
     items: [
-      { key: "plan", label: "Ranch-scale water plan", icon: BookOpen },
-      { key: "risks", label: "Risk register", icon: ShieldAlert, count: 5 },
+      { key: "plan", label: "Source plan", icon: BookOpen },
+      { key: "risks", label: "Risk register", icon: ShieldAlert, count: 6 },
       { key: "maintenance", label: "Maintenance plan", icon: Wrench },
       { key: "summary", label: "Executive summary", icon: Sparkles },
     ],
@@ -104,7 +116,7 @@ function Brand() {
       </div>
       <div className="min-w-0">
         <p className="serif truncate text-[18px] leading-5 font-semibold tracking-[-0.01em] text-white">Evant Ranch</p>
-        <p className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.19em] text-[#9cbab2]">Water collection</p>
+        <p className="mt-0.5 text-[9px] font-bold uppercase tracking-[0.19em] text-[#9cbab2]">Rainwater + well</p>
       </div>
     </div>
   );
@@ -164,6 +176,7 @@ function PageContent({ page, setPage, notify }: { page: PageKey; setPage: (page:
   switch (page) {
     case "intake": return <IntakeQuestions notify={notify} />;
     case "tasks": return <MasterTaskBoard notify={notify} />;
+    case "siteVisit": return <SiteVisitPlanner notify={notify} />;
     case "calculators": return <RainwaterCalculators />;
     case "tanks": return <TankPlanning />;
     case "distribution": return <PumpingDistribution />;
@@ -171,6 +184,8 @@ function PageContent({ page, setPage, notify }: { page: PageKey; setPage: (page:
     case "treatment": return <TreatmentPlanning />;
     case "regulatory": return <RegulatoryChecklist />;
     case "bids": return <BidPackage notify={notify} />;
+    case "recommendations": return <ContractorRecommendations notify={notify} />;
+    case "bidSystem": return <BidSystem notify={notify} />;
     case "documents": return <DocumentLibrary notify={notify} />;
     case "plan": return <RanchScalePlan />;
     case "risks": return <RiskRegister notify={notify} />;

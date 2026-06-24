@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Evant Ranch Water Collection",
-  description: "Planning and delivery workspace for a resilient ranch-scale water system.",
+  title: "Grandparents Ranch Rainwater System",
+  description: "Planning workspace for whole-house rainwater collection, potable treatment, storage, pumping, and well backup.",
 };
 
 export const viewport: Viewport = {
