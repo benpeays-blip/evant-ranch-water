@@ -6,6 +6,12 @@ The current working plan is to collect water from the house's 5,000+ square foot
 
 The well remains the backup source. The rainwater path is planned for potable whole-house use with added carbon filtration and NSF/ANSI 55 Class A UV, while the existing kitchen sink RO remains as the final drinking-water polish.
 
+## Public website
+
+[Visit the Evant Ranch Water Collection dashboard](https://evant-ranch-water.vercel.app)
+
+The production website is hosted on Vercel and connected to this GitHub repository. Approved changes merged into the production branch can be redeployed through the linked Vercel project.
+
 ## Local development
 
 ```bash
